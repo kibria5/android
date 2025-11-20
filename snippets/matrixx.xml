@@ -5,6 +5,11 @@
            sync-c="true"
            sync-j="4"
            revision="refs/heads/16.0" />
+  <remote  name="matrixx"
+           fetch="https://github.com/kibria5/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/16.0" />
   <remote  name="matrixx-devices"
            fetch="https://github.com/Matrixx-Devices"
            sync-c="true"
@@ -26,7 +31,7 @@
   <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="matrixx" />
 
   <!-- build repos -->
-  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="matrixx" >
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="kibria5" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -35,7 +40,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <project path="build/release" name="build_release" remote="matrixx" />
-  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="matrixx" >
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="kibria5" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -59,7 +64,7 @@
   <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="matrixx" />
 
   <!-- system repos -->
-  <project path="system/core" name="android_system_core" groups="pdk" remote="matrixx" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="kibria5" />
   <project path="system/libhwbinder" name="system_libhwbinder" remote="matrixx" />
 
   <!-- Sepolicy -->
@@ -67,7 +72,7 @@
 
   <!--vendor repos-->
   <project path="vendor/addons" name="android_vendor_addons" remote="matrixx"  />
-  <project path="vendor/lineage" name="android_vendor_lineage" remote="matrixx"  />
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="kibria5"  />
   <project path="vendor/MatrixxOTA" name="android_vendor_MatrixxOTA" remote="matrixx-devices"  />
 
   <!--Gms repos-->
